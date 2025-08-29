@@ -104,15 +104,15 @@ Regardless of the tool used (Jenkins, GitHub Actions, GitLab CI/CD, etc.), a bas
 
 ## API Endpoints
 
-| Method | Endpoint                 | Description                     |
-| ------ |--------------------------|---------------------------------|
-| GET    | `/health`                | Health check                    |
-| GET    | `/api/v1/tasks`          | List all tasks                  |
-| POST   | `/api/v1/tasks`          | Create a new task               |
-| PUT    | `/api/v1/tasks/{taskId}` | Update a task                   |
-| DELETE | `/api/v1/tasks/{taskId}` | Delete a task                   |
-| GET    | `/api/v1/tasks/{taskId}` | Get task with Id                |
-| GET    | `/metrics`               | (Optional) Productivity metrics |
+| Method | Endpoint                               | Description                     |
+| ------ |----------------------------------------|---------------------------------|
+| GET    | `/health`                              | Health check                    |
+| GET    | `/api/v1/tasks`                        | List all tasks                  |
+| POST   | `/api/v1/tasks`                        | Create a new task               |
+| PUT    | `/api/v1/tasks/udpate/{taskId}/status` | Update a task status            |
+| DELETE | `/api/v1/tasks/{taskId}`               | Delete a task                   |
+| GET    | `/api/v1/tasks/{taskId}`               | Get task with taskId            |
+| GET    | `/metrics`                             | (Optional) Productivity metrics |
 
 ---
 ## 💡 Future Enhancements
