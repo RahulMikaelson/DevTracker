@@ -2,7 +2,7 @@
 
 DevTracker is a simple developer task and health tracking REST API built with Spring Boot and integrated with a  CI/CD pipeline.
 
-This project is designed to help you learn backend development and implement a complete CI/CD workflow using Jenkins/Github-Actions — from code commit to Docker image build and deployment.
+This project is designed to help you learn backend development and implement a complete CI/CD workflow using Jenkins or Github-Actions — from code commit to Docker image build and deployment.
 
 ---
 
