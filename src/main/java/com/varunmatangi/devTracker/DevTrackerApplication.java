@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DevTrackerApplication {
 
 	public static void main(String[] args) {
-		// This will Starts the spring boot application
 		SpringApplication.run(DevTrackerApplication.class, args);
 	}
 
