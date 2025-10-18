@@ -115,8 +115,6 @@ Regardless of the tool used (Jenkins, GitHub Actions, GitLab CI/CD, etc.), a bas
 | GET    | `/metrics`                             | (Optional) Productivity metrics |
 
 ---
-## 💡 Future Enhancements
 
-PRs and suggestions welcome! This project is aimed at helping backend developers and DevOps learners build and deploy apps confidently.
 
 
