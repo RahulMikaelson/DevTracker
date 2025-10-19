@@ -1,5 +1,5 @@
 name: Feature Branch Continuous Integration
-run-name: ${{github.actor }} has triggered this by ${{ github.event }} event
+run-name: ${{github.actor }} has triggered this by ${{ github.event_name }} event
 on:
   push:
     branches:
