@@ -3,7 +3,8 @@ run-name: ${{github.actor }} has triggered this by ${{ github.event_name }} even
 on:
   pull_request:
     branches:
-      - 'feature/**'
+      - 'main'
+    types: ['opened','synchronize','reopened']
 jobs:
   Continuous-Integration:
     runs-on: ubuntu-latest
