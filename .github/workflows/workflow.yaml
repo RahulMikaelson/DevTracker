@@ -1,0 +1,9 @@
+name: Basic Workflow
+run-name: ${{ github.actor }} is Using GitHub Actions 🚀
+on:
+  workflow_dispatch:
+jobs:
+  DevTracker-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was triggered by a ${{ github.event_name }} event."
