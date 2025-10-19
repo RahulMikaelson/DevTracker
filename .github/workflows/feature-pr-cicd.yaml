@@ -1,0 +1,17 @@
+name: Feature Branch Continuous Integration and Continuous Deployment
+run-name: ${{github.actor }} has triggered this by ${{ github.event }} event
+on:
+  pull_request:
+    branches:
+      - 'feature/**'
+jobs:
+  Continuous-Integration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing Feature Branch CI
+        run: echo "Running this JOB"
+  Continuous-Deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing Feature Branch CD
+        run: echo "Running this JOB"
