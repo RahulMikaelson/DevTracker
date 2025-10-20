@@ -8,5 +8,21 @@ jobs:
   Continuous-Integration:
     runs-on: ubuntu-latest
     steps:
-      - name: Testing Feature Branch CI
-        run: echo "Running this JOB"
+      - name: Code Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Setup JDK
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+      - name: Build Application with Maven
+        run: mvn -B package --file pom.xml
+      - name: Run Unit Tests
+        run: mvn clean test
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v6
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
