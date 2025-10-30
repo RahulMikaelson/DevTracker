@@ -2,7 +2,7 @@
 
 DevTracker is a simple developer task and health tracking REST API built with Spring Boot and integrated with a  CI/CD pipeline.
 
-This project is designed to help you learn backend development and implement a complete CI/CD workflow using Jenkins or Github-Actions — from code commit to Docker image build and deployment.
+This project is designed to help you learn Full-Stack development and implement a complete CI/CD workflow using Jenkins or Github-Actions — from code commit to Docker image build and deployment.
 
 ---
 
@@ -26,6 +26,7 @@ This project is designed to help you learn backend development and implement a c
 
 | Layer       | Technology             |
 |-------------|------------------------|
+| Frontend    | React                  |
 | Backend     | Spring Boot            |
 | Database    | MongoDB                |
 | Testing     | Junit                  |
@@ -35,52 +36,12 @@ This project is designed to help you learn backend development and implement a c
 
 ---
 
-## 📂 Project Structure
 
-```bash
-devtracker/
-├── src/
-│   ├── main/
-│   │   ├── java/                       # Backend source code
-│   │   └── resources/
-│   │       └── application.yaml  # Spring Boot configuration
-│   └── test/                           # Test source code
-├── .github/
-│   └── workflows/                      # GitHub Actions workflows
-├── Dockerfile                          # Docker image setup
-├── Jenkinsfile                         # Jenkins pipeline configuration
-├── pom.xml                             # Maven build file
-└── README.md                           # Project documentation
-```
 
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/RahulMikaelson/DevTracker.git
-cd DevTracker
-```
-### 2. Start Application
-
-```bash
-./mvnw spring-boot:run
-```
-### 3.Run Test
-
-```bash
-./mvnw test
-```
-
-## 🐳 Docker Build & Run
-```bash
-docker build -t devtracker-backend .
-docker run -p 8080:8080 devtracker-backend
-```
 ## 🔄  CI/CD Pipeline Goals
 The primary purpose of this project is to create and explore a complete CI/CD pipeline with the following stages:
 
-1. **Build:** Compile the Java code and package it into a JAR file.
+1. **Build:** Compile the Java and React code and package it into a JAR file and Js Files.
 2. **Test:** Run automated unit and integration tests.
 3. **Code Quality Check:** Analyze the code for bugs, vulnerabilities, and code smells.
 4. **Containerization:** Build a Docker image of the application.
