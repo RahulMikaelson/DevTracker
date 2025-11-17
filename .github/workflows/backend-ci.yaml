@@ -1,0 +1,30 @@
+name: DevTracker Backend Continuous Integration
+run-name: ${{ github.actor }}  triggered ${{ github.workflow }} Workflow  🚀
+on:
+  workflow_dispatch:
+jobs:
+  Continuous-Integration:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./api
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v5
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: "temurin"
+          java-version: "21"
+          cache: "maven"
+      - name: Build with maven
+        run: mvn clean install
+      - name: Run Unit Test
+        run: mvn -B clean test
+      - name: Package application with Maven
+        run: mvn package -DskipTests
+      - name: Package Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: devtracker-backend-jar
+          path: ./api/target/*.jar
